@@ -52,7 +52,7 @@ text_blocks=' '.join(word.text for word in words)
 # this loop is required to write more paragraphs as monkeytype will provide more paragraphs after completing one paragraph
 while True:
     try:
-        pyautogui.write(text_blocks)
+        pyautogui.write(text_blocks, interval=0.008)
         
         old_text_block=text_blocks
         serching_strings=old_text_block[-10:]
